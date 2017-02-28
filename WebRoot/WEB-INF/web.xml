@@ -4,8 +4,30 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-  <display-name></display-name>	
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>com.hongshi.controller.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewController</servlet-name>
+    <servlet-class>com.hongshi.controller.ViewController</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewController</servlet-name>
+    <url-pattern>/ViewController</url-pattern>
+  </servlet-mapping>	
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>test_backSaveHtml.html</welcome-file>
   </welcome-file-list>
 </web-app>

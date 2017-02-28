@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="refer/bootstrap-3.3.0/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="refer/jquery-3.1.0/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="refer/bootstrap-3.3.0/js/bootstrap.js"></script>
+</head>
+<body>
+
+    <div class="demo">
+        <div class="test" style="color: #0a6aa1; font-size: 24px">
+            测试
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        保存
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="fileName" value="index"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary yaha">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="res">
+
+    </div>
+    <script>
+        $('.yaha').click(function(){
+            console.log("file:" +$('.fileName')[0].value);
+            $.ajax({
+                type:'POST',
+                url:'ControllerServlet',
+                data:{
+                    layout: '<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> </head> <body>'+$('.demo').html() +'</body>',
+                    fileName:$('.fileName')[0].value
+                },
+                success:function(data){
+                    console.log("yaha click: "+data);
+                    $('.res').append(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

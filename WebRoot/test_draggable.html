@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery UI 拖动（Draggable）</title>
+    <link href="refer/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="refer/jquery-ui/jquery-ui.structure.css" rel="stylesheet">
+    <script type="text/javascript" src="refer/jquery-3.1.0/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="refer/jquery-ui/jquery-ui.min.js"></script>
+    <style>
+        #draggable{
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            border: solid black 2px;
+        }
+
+        .demo{
+            width: 300px;
+            height: 300px;
+            border: solid 2px black;
+        }
+
+        .left .view{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="draggable" class="ui-widget-content left">
+        <label class="drag">拖我</label>
+        <div class="view">
+            <h3 contenteditable="true">h3. 这是一套可视化布局系统.</h3>
+        </div>
+    </div>
+
+    <div class="demo">
+
+    </div>
+    <script>
+        $(function(){
+            $("#draggable").draggable({
+                connectToSortable:".demo",
+                helper: "clone",
+                handle:".drag",
+
+                stop:function(e,t){
+                    $(".demo").sortable({
+                        opacity: .35,
+                        connectWith: ".demo"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

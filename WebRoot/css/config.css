@@ -1,0 +1,168 @@
+html,body{
+    margin: 0;
+}
+
+.navbar-brand{
+    padding: 7px 15px;
+}
+.container-brand{
+    margin: 5px !important;
+    float: left;
+    padding: 0;
+}
+.container-brand li{
+    color: white;
+    list-style: none;
+}
+
+.divider-vertical{
+    float: left;
+    height: 50px;
+    margin: 0 9px;
+    border-left: 2px solid #111111;
+    border-right: 2px solid #222222;
+}
+
+.btn-group{
+    margin: 8px;
+}
+
+.container-main {
+    margin: 51px 0 0 0;
+}
+
+.container-menu{
+    position: absolute;
+    background-color: #141313;
+    width: 100px;
+    height: auto;
+}
+
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-toggler {
+    margin: 4px 0 4px 140px;
+    width: 29px;
+    height: 29px;
+    opacity: 0.6;
+    background-image: url(../resources/images/sidebar-toggler.jpg);
+}
+
+.sidebar-toggler:hover{
+    opacity: 1;
+}
+
+.page-sidebar-menu{
+    background-color: #141313;
+    width: 175px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: 51px;
+}
+
+.subItem{
+    border-top: 1px solid #5c5c5c !important;
+    color: #ffffff !important;
+}
+
+.subItem{
+    display: block;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.subItem:hover{
+    background: #303030;
+}
+
+.arrow:before{
+    float: right;
+    margin-top: -5px;
+    margin-right: 5px;
+    display: inline;
+    font-size: 20px;
+    color: #7d7d7d !important;
+    font-family: FontAwesome;
+    height: auto;
+    content: "\f104";
+    font-weight: 300;
+    text-shadow: none;
+}
+
+.subMenu{
+    /*display: none;*/
+
+}
+
+.controls{
+    width: 40%;
+    display: inline-block;
+}
+
+.controls > select{
+    border: 1px solid #cccdea;
+    color: #555;
+}
+
+.control-label{
+    font-size: 14px;
+}
+
+.button_select{
+    text-shadow: none;
+    background-color: #35aa47;
+    width: 72px;
+    font-size: 14px;
+    padding: 0;
+}
+
+.button_select:hover{
+    background-color: #1d943b !important;
+    color: #fff !important
+}
+
+.colorSelectTool{
+    width: 20px;
+    border: 1px solid #ffffff;
+    padding: 0;
+}
+
+.input_border{
+    margin-left: 16px;
+    width: 32px;
+    border: 0;
+}
+
+.container-designer{
+    margin-left: 175px;
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background-color: #f7f7f7;
+}
+
+.subMenu .view{
+    display: none;
+}
+
+.container-designer .view{
+    display: block;
+}
+
+.fixedHeader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #212121;
+    height: 42px;
+    width: 100%;
+}
+
+.container-designer .dragIcon{
+    display: none;
+}

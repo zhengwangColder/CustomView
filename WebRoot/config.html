@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配置页面</title>
+    <link href="refer/bootstrap-3.3.0/css/bootstrap.css" rel="stylesheet">
+    <link href="refer/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="refer/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="css/config.css" rel="stylesheet">
+
+    <script type="text/javascript" src="refer/jquery-3.1.0/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="refer/bootstrap-3.3.0/js/bootstrap.js"></script>
+    <script type="text/javascript" src="refer/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+</head>
+<body class="hongShi">
+    <!--头部-->
+    <div class="header navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="resources/images/brand.png" alt="商标">
+            </a>
+            <ul class="container-brand">
+                <li><span class="brand-name">宏时数据</span></li>
+                <li><span class="brand-name">HongShi Data</span></li>
+            </ul>
+            <ul class="nav">
+                <li class="divider-vertical"></li>
+                <li>
+                    <div class="btn-group">
+                        <button type="button" id="edit" class="btn btn-primary active">
+                            <span class="glyphicon glyphicon-edit"></span> 编辑
+                        </button>
+                        <button type="button" id="preview" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-eye-open"></span> 预览
+                        </button>
+                        <button type="button" id="save" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span> 保存
+                        </button>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" id="revoke" class="btn btn-primary">
+                            <span class="fa fa-reply"></span> 撤销
+                        </button>
+                        <button type="button" id="clear" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-trash"></span> 清空
+                        </button>
+                    </div>
+
+                    <div class="btn-group pull-right">
+                        <button type="button" id="deploy" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-upload"></span> 发布
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--下部内容-->
+    <div class="container-main">
+        <!--左侧内容-->
+        <div class="page-sidebar-menu">
+            <!--菜单-->
+            <ul class="left-menu">
+                <li>
+                    <div class="sidebar-toggler"></div>
+                </li>
+                <li class="subItem">
+                    <span class="glyphicon glyphicon-cog"></span>
+                    <span class="title">页面设置</span>
+                    <span class="arrow"></span>
+                    <div class="subMenu">
+                        <form action="#" class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label">页面大小</label>
+                                <div class="controls">
+                                    <select class="small m-wrap" tabindex="1">
+                                        <option value="1024*768">1024*768</option>
+                                        <option value="1920*1080">1920*1080</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">背景设置</label>
+                                <input type="color" class="colorSelectTool"/><button class="button_select">选择图片</button>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">边框设置</label>
+                                <input type="color" class="colorSelectTool"/><input type="text" placeholder="0" class="input_border"/>
+                                <label class="control-label">px</label>
+                            </div>
+                        </form>
+                        <!--<div class="page-setting">-->
+                            <!--<span>页面大小</span>-->
+                        <!--</div>-->
+                    </div>
+                </li>
+                <li class="subItem">
+                    <span class="glyphicon glyphicon-th"></span>
+                    <span class="title">常用控件</span>
+                    <span class="arrow"></span>
+                    <div class="subMenu">
+                        <div class="box box-element ui-draggable">
+                            <span>头部横幅</span>
+                            <span class="glyphicon glyphicon-resize-horizontal dragIcon"></span>
+                            <!--头部视图-->
+                            <div class="view fixedHeader">
+                            </div>
+                        </div>
+                        <div class="box box-element ui-draggable" style="display: inline-block">
+                            <span>图标</span>
+                            <span class="glyphicon glyphicon-align-justify dragIcon"></span>
+                            <div class="view">
+                                <img src="resources/images/brand.png">
+                            </div>
+                        </div>
+                        <div class="box box-element ui-draggable" style="display: inline-block">
+                            <span>文本</span>
+                            <span class="glyphicon glyphicon-align-justify dragIcon"></span>
+                            <div class="view">
+                                <span class="text-center">输入文字</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="subItem">
+                    <span class="glyphicon glyphicon-signal"></span>
+                    <span class="title">图表控件</span>
+                    <span class="arrow"></span>
+                    <div class="subMenu">
+
+                    </div>
+                </li>
+                <li class="subItem">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    <span class="title">自定义控件</span>
+                    <span class="arrow"></span>
+                    <div class="subMenu">
+
+                    </div>
+                </li>
+                <li class="subItem">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    <span class="title">使用教程</span>
+                    <span class="arrow"></span>
+                    <div class="subMenu">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--右侧内容-->
+        <div class="container-designer">
+
+        </div>
+    </div>
+</body>
+</html>
